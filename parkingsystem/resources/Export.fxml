@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="373.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingsystem.controllers.ExportController">
+   <children>
+      <Line endX="132.0" fill="BLACK" layoutX="127.0" layoutY="42.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="35.0" layoutY="25.0" text="Customer Information" />
+      <VBox layoutX="27.0" layoutY="49.0" prefHeight="73.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Full Name">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Adress">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="adressField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="311.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="53.0" text="Car plate">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="plateField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Line endX="132.0" layoutX="426.0" layoutY="42.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="334.0" layoutY="25.0" text="Parked Time" />
+      <VBox layoutX="334.0" layoutY="50.0" prefHeight="73.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Entrance">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="entranceField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Export">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="exportField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="311.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="53.0" text="Minutes">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="parkedTimeField" editable="false" focusTraversable="false" prefHeight="27.0" prefWidth="133.0" stylesheets="@../styles/customerStyling.css">
+                     <HBox.margin>
+                        <Insets left="6.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Line endX="132.0" layoutX="127.0" layoutY="191.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="35.0" layoutY="174.0" text="Parking &amp; Pricelist" />
+      <VBox layoutX="32.0" layoutY="201.0" prefHeight="73.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Parking">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="parkingField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Picelist">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="pricelistField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" stylesheets="@../styles/customerStyling.css" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Line endX="136.0" layoutX="424.0" layoutY="190.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="332.0" layoutY="173.0" text="Final Cost" />
+      <HBox layoutX="332.0" layoutY="201.0" prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="58.0" text="Cost">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="costField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="130.0" style="-fx-font-weight: bold;" stylesheets="@../styles/customerStyling.css" />
+         </children>
+      </HBox>
+      <Button fx:id="export" layoutX="168.0" layoutY="293.0" mnemonicParsing="false" onAction="#export" prefHeight="47.0" prefWidth="126.0" text="Export">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Data-Export-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="cancel" layoutX="306.0" layoutY="293.0" mnemonicParsing="false" onAction="#cancel" prefHeight="47.0" prefWidth="126.0" text="Cancel">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="parked_id" disable="true" editable="false" layoutX="27.0" layoutY="-31.0" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="224.0" prefWidth="328.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingsystem.controllers.AddUserController">
+   <children>
+      <GridPane layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="346.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="273.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label contentDisplay="RIGHT" text="Username" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label contentDisplay="RIGHT" prefHeight="21.0" prefWidth="89.0" text="Password" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="usernameField" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Add User" textFill="#4278c9" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="12.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Button layoutX="40.0" layoutY="159.0" mnemonicParsing="false" onAction="#AddUserButton" prefHeight="47.0" prefWidth="126.0" text="Add">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/add-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancel" layoutX="193.0" layoutY="159.0" mnemonicParsing="false" onAction="#cancelAddUser" prefHeight="47.0" prefWidth="126.0" text="Cancel">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+.close-button{
+    -fx-background-color: #ff6969;
+   -fx-font-size: 14px;
+}
+
+.close-button:hover{
+    -fx-background-color: #ff4040;
+}
+
+.firstRow-button{
+    -fx-background-color: #fceb4e;
+   -fx-font-size: 14px;
+}
+
+.firstRow-button:hover{
+    -fx-background-color: #d6c524;
+} 
+
+.management-button{
+   -fx-background-color:  #78d4ff;
+   -fx-font-size: 14px;
+} 
+
+.management-button:hover{
+   -fx-background-color:  #38c0ff;
+} 
+
+.firstRowRegular-button{
+    -fx-background-color: #faaf52;
+   -fx-font-size: 14px;
+}
+
+.firstRowRegular-button:hover{
+    -fx-background-color: #fc9a21;
+} 
+
+.managementRegular-button{
+   -fx-background-color: #89ff5e;
+   -fx-font-size: 14px;
+} 
+
+.managementRegular-button:hover{
+   -fx-background-color:  #5cff21;
+} 

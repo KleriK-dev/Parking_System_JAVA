@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingsystem.controllers.InsertEmergentCarController">
+   <children>
+      <Line endX="132.0" layoutX="132.0" layoutY="39.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="40.0" layoutY="22.0" text="Emergent Car" />
+      <HBox layoutX="32.0" layoutY="50.0" prefHeight="27.0" prefWidth="311.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="53.0" text="Car plate">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="plateField" prefHeight="25.0" prefWidth="130.0" />
+         </children>
+      </HBox>
+      <Line endX="136.0" layoutX="132.0" layoutY="126.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="40.0" layoutY="109.0" text="Owner" />
+      <VBox layoutX="32.0" layoutY="136.0" prefHeight="73.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Full Name">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="nameField" prefHeight="25.0" prefWidth="130.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="27.0" prefWidth="198.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="58.0" text="Adress">
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="adressField" prefHeight="25.0" prefWidth="130.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Line endX="132.0" layoutX="431.0" layoutY="40.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="339.0" layoutY="23.0" text="Parking Place" />
+      <HBox layoutX="331.0" layoutY="51.0" prefHeight="27.0" prefWidth="237.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="53.0" text="Parking">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin></Label>
+            <ComboBox fx:id="parkings" prefWidth="150.0" promptText="Select Parking" />
+         </children>
+      </HBox>
+      <Line endX="132.0" layoutX="429.0" layoutY="126.0" startX="-100.0" stroke="#000000d9" strokeWidth="0.5" />
+      <Label layoutX="337.0" layoutY="109.0" text="Emergent Pricelists" />
+      <HBox layoutX="329.0" layoutY="137.0" prefHeight="27.0" prefWidth="237.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="53.0" text="PriceList">
+               <HBox.margin>
+                  <Insets top="4.0" />
+               </HBox.margin></Label>
+            <ComboBox fx:id="pricelists" prefWidth="150.0" promptText="Select Pricelist" />
+         </children>
+      </HBox>
+      <Button layoutX="164.0" layoutY="220.0" mnemonicParsing="false" onAction="#insert" prefHeight="47.0" prefWidth="126.0" styleClass="add-button" text="Insert">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Data-Import-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="cancel" layoutX="311.0" layoutY="220.0" mnemonicParsing="false" onAction="#cancel" prefHeight="47.0" prefWidth="126.0" styleClass="cancel-button" text="Cancel">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

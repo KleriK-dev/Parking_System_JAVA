@@ -1,0 +1,48 @@
+.left-bar{
+     -fx-background-color: #4278c9;
+}
+
+.left-bar-buttons{
+    -fx-background-color: #80b3ff;
+    -fx-border-color: #418bfa;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+}
+
+.left-bar-buttons:hover{
+    -fx-background-color: #96c0ff;
+}
+
+.text-field{
+    -fx-background-color: #b5d3ff;
+    -fx-border-color: #418bfa;
+    -fx-border-width: 1 1 1 1;
+    -fx-background-insets: 0;
+    -fx-text-fill: #002f73;
+}
+
+.add-button{
+    -fx-background-color: #00c700; 
+     -fx-text-fill: white;
+     -fx-padding: 15px 32px;
+    -fx-font-size: 16px;
+}
+
+.add-button:hover{
+    -fx-background-color: green; 
+}
+
+.cancel-button{
+    -fx-background-color: red;  
+     -fx-text-fill: white;
+     -fx-padding: 15px 32px;
+    -fx-font-size: 16px;
+}
+
+.cancel-button:hover{
+    -fx-background-color: #b50000;
+}
+
+.mygridStyle Line {
+  -fx-stroke   : #4278c9;
+}

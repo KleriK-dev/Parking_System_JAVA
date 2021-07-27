@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1252.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingsystem.controllers.MainController">
+   <top>
+      <VBox prefHeight="82.0" prefWidth="1252.0" style="-fx-background-color: grey;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Database">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openCustomerTab" text="Customers">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/user-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#openCarTab" text="Cars">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/vw-beetle-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#openParkingTab" text="Parking">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Parking-Garage-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#openPriceListTab" text="PriceLists">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/price-tag-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#openEmergentPriceListTab" text="Emergent PriceLists">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/Price-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Settings">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openUsersTab" text="Users">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/user-settings-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="54.0" prefWidth="1252.0" styleClass="under-menu" stylesheets="@../styles/mainStyling.css">
+               <children>
+                  <Button fx:id="navbarCustomers" mnemonicParsing="false" onAction="#openCustomerTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="200.0" right="10.0" top="8.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Office-Customer-Male-Light-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Customers" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="car" mnemonicParsing="false" onAction="#openCarTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="10.0" top="8.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/vw-beetle-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cars" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openParkingTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="10.0" top="8.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Parking-Garage-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Parking" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openPriceListTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets right="10.0" top="8.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/price-tag-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="PriceLists" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#openEmergentPriceListTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Price-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Emergent PriceLists" />
+                     </tooltip>
+                     <HBox.margin>
+                        <Insets right="10.0" top="8.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.1088" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Accordion styleClass="accordion-color" stylesheets="@../styles/mainStyling.css">
+              <panes>
+                <TitledPane animated="false" text="Customers">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="inside-titlePane" stylesheets="@../styles/mainStyling.css">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#openCustomerTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Customer" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Office-Customer-Male-Light-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children></VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Parking">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="inside-titlePane" stylesheets="@../styles/mainStyling.css">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#openReceptionTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Reception Parking" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Admin-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#openParkingTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Parking" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Parking-Garage-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#openCarTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Cars" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/vw-beetle-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children></VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane animated="false" text="ToolBox">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="inside-titlePane" stylesheets="@../styles/mainStyling.css">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#openAddCustomerTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Add Customer" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Male-user-add-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#openAddCarTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Add Car" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/car-add-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="21.0" layoutY="66.0" mnemonicParsing="false" onAction="#openAddParkingTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Add Parking Place" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/add-1-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#openAddPriceListTab" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Add PriceList" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Bookmark-add-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addEmergentPriceList" styleClass="navbar-buttons" stylesheets="@../styles/mainStyling.css" text="Add Emergent PriceList" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Add-ticket-icon.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children></VBox>
+                     </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="19.0" prefWidth="1252.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="955.0" layoutY="1.0" text="\@ParkingSystem 2021 by Klerido Bici" />
+            <Label fx:id="programUser" layoutX="798.0" layoutY="1.0" prefHeight="17.0" prefWidth="142.0" />
+            <Label layoutX="768.0" layoutY="1.0" text="User: " />
+         </children></Pane>
+   </bottom>
+</BorderPane>

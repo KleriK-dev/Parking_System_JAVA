@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="parkingsystem.controllers.EditPriceListController">
+   <children>
+      <GridPane layoutX="16.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="167.0" prefWidth="357.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="96.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="404.0" minWidth="10.0" prefWidth="273.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label contentDisplay="RIGHT" text="Description" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label contentDisplay="RIGHT" prefHeight="21.0" prefWidth="89.0" text="Price/Month" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="descriptionField" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Update PriceList" textFill="#4278c9" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="-45.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="editPriceListID" visible="false" />
+            <Line endX="173.5" endY="1.7928931713104248" startX="-100.0" startY="1.7928931713104248" stroke="#000000d9" strokeWidth="0.5" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="-60.0" top="30.0" />
+               </GridPane.margin>
+            </Line>
+         </children>
+      </GridPane>
+      <Button fx:id="updateEditButton" layoutX="34.0" layoutY="185.0" mnemonicParsing="false" onAction="#updatePriceListButton" prefHeight="47.0" prefWidth="126.0" text="Update">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Actions-edit-redo-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="cancelEditPriceLlist" layoutX="212.0" layoutY="185.0" mnemonicParsing="false" onAction="#cancelEditPriceLlist" prefHeight="47.0" prefWidth="126.0" text="Cancel">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cancel-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>
